@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="baseLayout" template="/BaseLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/Header.jsp" />
+		<put-attribute name="menu" value="/Menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/Footer.jsp" />
+	</definition>
+<definition name="baseLayout2" template="/BaseLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/Header.jsp" />
+		<put-attribute name="menu" value="/menu2.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/Footer.jsp" />
+	</definition>
+
+
+	<definition name="/welcome.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body" value="/Welcome.jsp" />
+		<put-attribute name="currentPage" value="FrontPage" />
+		
+	</definition>
+<definition name="/welcome2.tiles" extends="baseLayout2">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body" value="/welcome2.jsp" />
+		
+		<put-attribute name="currentPage" value="FrontPage" />
+		
+	</definition>
+<definition name="/add.tiles" extends="baseLayout2">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body" value="/add.jsp" />
+		
+		<put-attribute name="currentPage" value="FrontPage" />
+		
+	</definition>
+
+
+	<definition name="/billing.tiles" extends="baseLayout">
+		<put-attribute name="title" value="biling" />
+		<put-attribute name="body" value="/billing.jsp" />
+			<put-attribute name="currentPage" value="FrontPage" />
+	</definition>
+	<definition name="/estore.tiles" extends="baseLayout">
+		<put-attribute name="title" value="estore" />
+		<put-attribute name="body" value="/estore.jsp" />
+			<put-attribute name="currentPage" value="FrontPage" />
+	</definition>
+	<definition name="/searchopt.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Struts 2 Ajax Demo" />
+		<put-attribute name="body" value="/searchopt.jsp" />
+			<put-attribute name="currentPage" value="FrontPage" />
+	</definition>
+<definition name="/autocompleter.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Struts 2 Ajax Demo" />
+		<put-attribute name="body" value="/autocompleter.jsp" />
+			<put-attribute name="currentPage" value="FrontPage" />
+	</definition>
+<definition name="/shopcart.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Struts 2 Ajax Demo" />
+		<put-attribute name="body" value="/shopcart.jsp" />
+			<put-attribute name="currentPage" value="FrontPage" />
+	</definition>
+
+
+
+
+</tiles-definitions>

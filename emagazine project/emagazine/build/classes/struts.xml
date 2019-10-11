@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<constant name="struts.devMode" value="true" />
+<constant name="struts.enable.DynamicMethodInvocation"
+		value="false" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.custom.i18n.resources"
+		value="ApplicationResources" />
+
+   <!-- 	<package name="default" extends="struts-default" namespace="/">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+   </package> -->
+   <package name="com.action"  extends="struts-default">
+	<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+         
+         
+         <action name="reg"  class="com.action.RegisterAction">
+               <result name="success">/registered.jsp</result>
+               <result name="input">/register.jsp</result>
+    </action>
+         <action name="fp"  class="com.wrox.begjsp.ch03.pass">
+               <result name="success">/hint.jsp</result>
+               
+    </action>
+
+<action name="ajaxdemo" class="com.wrox.begjsp.ch03.autocomplete" method="execute">
+    
+        <result name="success" type="tiles">/autocompleter.tiles</result>
+    
+</action>
+<action name="userImage"
+			class="com.wrox.begjsp.ch03.FileUploadAction">
+
+			<result name="success">SuccessUserImage.jsp</result>
+			<result name="input">UserImage.jsp</result>
+		</action>
+		
+
+<action name="login"
+			class="com.wrox.begjsp.ch03.LoginAction">
+			<result name="success" type="tiles">/welcome.tiles</result>
+			<result name="error">/Login.jsp?action=inn</result>
+			<result name="Admin" type="tiles">/welcome2.tiles</result>
+		</action>
+<action name="logout" class="com.wrox.begjsp.ch03.logoutAction" >
+   <result name="success" type="redirect">/Login.jsp</result>
+</action>
+
+<action name="estore"
+			class="com.wrox.begjsp.ch03.pass">
+			<result name="success" type="tiles">/estore.tiles</result>
+			</action>
+<action name="add"
+			class="com.wrox.begjsp.ch03.pass">
+			<result name="success" type="tiles">/add.tiles</result>
+			</action>
+
+
+<action name="welcome"
+			class="com.wrox.begjsp.ch03.pass">
+			<result name="success" type="tiles">/welcome.tiles</result>
+			</action>
+				
+<action name="shopcart"
+			class="com.wrox.begjsp.ch03.pass">
+			<result name="success" >/shopcart.jsp</result>
+			</action>
+<action name="shopcart1"
+			class="com.wrox.begjsp.ch03.pass">
+			<result name="success" type="tiles">/dummy.tiles</result>
+			</action>
+		
+
+   
+      <action name="depo"  class="com.wrox.begjsp.ch03.search">
+               <result name="success" type="tiles">/searchopt.tiles</result>
+         </action>
+   <action name="add"  class="com.wrox.begjsp.ch03.pass">
+               <param name="maximumSize">2097152</param>
+				<param name="allowedTypes">
+					image/png,image/gif,image/jpeg,image/pjpeg
+				</param>
+               
+               <result name="success" type="tiles">/add.tiles</result>
+               
+         </action>
+   <action name="depo2"  class="com.wrox.begjsp.ch03.addin">
+               <param name="maximumSize">2097152</param>
+				<param name="allowedTypes">
+					image/png,image/gif,image/jpeg,image/pjpeg
+				</param>
+               
+               <result name="success" type="tiles">/welcome2.tiles</result>
+               <result name="input" type="tiles">/add.tiles</result>
+         </action>
+   
+   
+   </package>
+ </struts>
